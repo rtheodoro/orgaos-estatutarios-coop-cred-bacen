@@ -9,6 +9,7 @@
 ################################################################################.
 ################################################################################.
 
+setwd(here::here())
 
 # Packages ----
 library(magrittr)
@@ -21,7 +22,7 @@ datacoleta <- format(Sys.time(), "%Y%m")
 u_bc_csv <- "https://www3.bcb.gov.br/informes/rest/pessoasJuridicas/csv?seg=9&age=true"
 
 # local para salvar os arquivos
-caminho <- glue::glue("/dados/{datacoleta}")
+caminho <- glue::glue("dados/{datacoleta}")
 
 # Criando pasta destino
 if (file.exists(caminho)) {
