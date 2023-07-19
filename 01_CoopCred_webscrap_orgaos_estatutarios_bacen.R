@@ -315,15 +315,23 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em:", format(Sys.Date(), '%d %b %Y'), ".
+Atualizado em: ", format(Sys.Date(), '%d %b %Y'), ".
 <hr> \n
 ## Cooperativas de Crédito: \n
 ### Tabela de informações gerais: \n", paste(info_gerais_coop |> head(5) |>  knitr::kable(), collapse = "\n"), 
-"### Tabela de comitê de auditoria: \n", paste(comite_auditoria_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
-"### Tabela de estrutura de governança: \n", paste(estrutura_governanca |> head(5) |> knitr::kable(), collapse = "\n"), 
-"### Tabela de auditor independente: \n", paste(auditor_independente_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
-   "### Tabela de número de agências: \n", paste(numero_de_agencias_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
-"") |> writeLines("README.md")
+"\n
+
+### Tabela de comitê de auditoria: \n", paste(comite_auditoria_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+"\n
+
+### Tabela de estrutura de governança: \n", paste(estrutura_governanca |> head(5) |> knitr::kable(), collapse = "\n"), 
+"\n
+
+### Tabela de auditor independente: \n", paste(auditor_independente_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+"\n
+
+### Tabela de número de agências: \n", paste(numero_de_agencias_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+"\n") |> writeLines("README.md")
 
 
 
