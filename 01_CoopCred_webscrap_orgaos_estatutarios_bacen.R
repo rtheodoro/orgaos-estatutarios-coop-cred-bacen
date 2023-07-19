@@ -28,7 +28,7 @@ caminho <- glue::glue("dados/{datacoleta}")
 if (file.exists(caminho)) {
    cat("A pasta já existe")
 } else {
-   #dir.create(caminho)
+   dir.create(caminho)
    cat("Pasta criada.")
 }
 
