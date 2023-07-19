@@ -3,7 +3,7 @@ on:
     - cron:  "0 12 * 1-12 *" 
   workflow_dispatch:
   
-name: 01_CoopCred_webscrap_orgaos_estatutarios_bacen
+name: 01_CoopCred_webscrap_orgaos_estatutarios_bacen.R
   
 jobs:
   run-r-script:
@@ -45,7 +45,7 @@ jobs:
         # executes the RScript stored in the file
         # 01-monitoring-quarto-repos/script.R
         run: |
-          Rscript "01_CoopCred_webscrap_orgaos_estatutarios_bacen"                        
+          Rscript "01_CoopCred_webscrap_orgaos_estatutarios_bacen.R"                        
 
         # save the results in the repository
         # using git in the command line
