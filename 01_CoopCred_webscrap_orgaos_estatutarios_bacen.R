@@ -64,12 +64,11 @@ cnpj <- c(cnpj_coopcred$cnpj)
 
 # * Carrega df Vazios ----
 info_gerais_coop  <- data.frame()
-carteiras_coop <- data.frame()
 comite_auditoria_coop <- data.frame()
 estrutura_governanca <- data.frame()
 auditor_independente_coop <- data.frame()
 numero_de_agencias_coop <- data.frame()
-conglomerado_coop <- data.frame()
+
 
 # ** Informacoes gerais ----
 i <- 0
@@ -118,71 +117,15 @@ for(i in 1:length(cnpj)){
    } else {
       print("Faz nada")
    }
-};rm(i)
-
-write.csv(info_gerais_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_info_gerais.csv"), row.names = FALSE)
-
-# ** Carteira ----
-i <- 0
-
-for(i in 1:length(cnpj)){
    
-   print(paste0("CNPJ ", cnpj[i], " --- ", i, " de ", length(cnpj))) 
-   dcoop <-
-      jsonlite::fromJSON(
-         paste0(
-            "https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=",
-            cnpj[i],
-            ""
-         )
-      )
-   
-   ifelse(
-      #!is.null(purrr::pluck(dcoop, "carteiras")) | 
-         !all(sapply(purrr::pluck(dcoop, "carteiras"), function(x) x == 0)),
-      carteiras_coop_i <-
-         dcoop %>% purrr::pluck(., "carteiras", .default = NA) %>%
-         dplyr::mutate(
-            cnpj = purrr::pluck(dcoop, "cnpj"),
-            nome_coop = purrr::pluck(dcoop, "nome")
-         ) %>%
-         dplyr::select(cnpj, nome_coop, everything(),-id),
-      print("Vazio")
-   )
-   
-   if (exists("carteiras_coop_i")){
-      if (nrow(carteiras_coop)==0){
-         carteiras_coop <- carteiras_coop_i
-      } else {
-         carteiras_coop <- carteiras_coop %>% rbind(carteiras_coop_i)
-         rm(carteiras_coop_i)
-      }
-   } else {
-      print("Faz nada")
-   }
-
-   
-};rm(i)
-
-if(nrow(carteiras_coop) !=0) {
-   write.csv(carteiras_coop,
-             glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_carteiras.csv"), row.names = FALSE)
-} else {
-   cat("Arquivo vazio")
-}
-   
-# ** Auditoria ----
-for(i in 1:length(cnpj)){
-   
-   print(paste0("CNPJ ",cnpj[i]," --- ",i," de ",length(cnpj)))  
-   dcoop <- jsonlite::fromJSON(paste0("https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=", cnpj[i], ""))
+   print(paste0("CNPJ ",cnpj[i]," Comitê de auditoria")) 
    
    ifelse(!is.null(purrr::pluck(dcoop,  "orgaos", "administradores", 1)),
-   comite_auditoria_coop_i <- dcoop %>% purrr::pluck(., "orgaos", "administradores", 1) %>% 
-                                       dplyr::mutate(cnpj = purrr::pluck(dcoop, "cnpj"),
-                                                     nome_coop = purrr::pluck(dcoop, "nome")) %>% 
-                                       dplyr::select(cnpj, nome_coop, everything(), -id),
-   print("Vazio"))
+          comite_auditoria_coop_i <- dcoop %>% purrr::pluck(., "orgaos", "administradores", 1) %>% 
+             dplyr::mutate(cnpj = purrr::pluck(dcoop, "cnpj"),
+                           nome_coop = purrr::pluck(dcoop, "nome")) %>% 
+             dplyr::select(cnpj, nome_coop, everything(), -id),
+          print("Vazio"))
    
    if (exists("comite_auditoria_coop_i")){
       if (nrow(comite_auditoria_coop)==0){
@@ -194,32 +137,23 @@ for(i in 1:length(cnpj)){
    } else {
       print("Faz nada")
    }
-};rm(i)
-
-write.csv(comite_auditoria_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_comite_auditoria.csv"), row.names = FALSE)
-
-# ** Orgaos de governanca ----
-
-for(i in 1:length(cnpj)){
    
-   dorgao <- jsonlite::fromJSON(paste0("https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=",cnpj[i],""))
+   print(paste0("CNPJ ",cnpj[i]," Estrutura de governança")) 
    
-   print(paste0("CNPJ ",cnpj[i]," --- ",i," de ",length(cnpj)))  
-   
-   if (!is.null(purrr::pluck(dorgao,
+   if (!is.null(purrr::pluck(dcoop,
                              "orgaos",
                              "administradores",
                              1))) {
-      for (j in 1:length(unique(dorgao$orgaos$administradores))) {
-         estrutura_governanca_j <- dorgao %>%
+      for (j in 1:length(unique(dcoop$orgaos$administradores))) {
+         estrutura_governanca_j <- dcoop %>%
             purrr::pluck(.,
                          "orgaos",
                          "administradores",
                          as.numeric(j)) %>%
             dplyr::mutate(
-               cnpj = purrr::pluck(dorgao, "cnpj"),
-               nomec = purrr::pluck(dorgao, "nome"),
-               orgao = purrr::pluck(dorgao, "orgaos", 2, j)
+               cnpj = purrr::pluck(dcoop, "cnpj"),
+               nomec = purrr::pluck(dcoop, "nome"),
+               orgao = purrr::pluck(dcoop, "orgaos", 2, j)
             ) %>%
             dplyr::select(cnpj, nomec, everything(),-id)
          
@@ -239,46 +173,16 @@ for(i in 1:length(cnpj)){
       
    }
    
-   
-}; rm(i)
-
-estrutura_governanca |> dplyr::count(orgao) # Verirficar conselhos
-###### adicionar coluna identificando comite adm, fisc, dir
-# "COMITÊ DE AUDITORIA"       "CONSELHO DE ADMINISTRACAO"
-# "CONSELHO FISCAL"           "DIRETORIA EXECUTIVA"
-
-
-
-estrutura_governanca <- estrutura_governanca |>
-   dplyr::mutate(orgao = dplyr::case_when(
-      stringr::str_detect(orgao, "EXECUTIV") |
-         stringr::str_detect(orgao, "DIRETOR") ~ "DIRETORIA EXECUTIVA",
-      stringr::str_detect(orgao, "ADMIN") ~ "CONSELHO DE ADMINISTRAÇÃO",
-      TRUE ~ orgao
-   ))
-
-
-estrutura_governanca |> dplyr::count(orgao)
-
-write.csv(estrutura_governanca, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_estrutura_governanca.csv"), row.names = FALSE)
-
-
-
-# ** Agencia ----
-
-for(i in 1:length(cnpj)){
-   
-   print(paste0("CNPJ ",cnpj[i]," --- ",i," de ",length(cnpj)))    
-   dcoop <- jsonlite::fromJSON(paste0("https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=",cnpj[i],""))
+   print(paste0("CNPJ ",cnpj[i]," Número de Agẽncias")) 
    
    ifelse(!is.null(purrr::pluck(dcoop, "numeroAgencias")),  
-   numero_de_agencias_coop_i <- dcoop %>% purrr::pluck(., "numeroAgencias") %>% 
-                                          as.data.frame() %>% 
-                                          data.table::setnames(".","numeroAgencias") %>% 
-                                          dplyr::mutate(cnpj = purrr::pluck(dcoop, "cnpj"),
-                                                        nome_coop = purrr::pluck(dcoop, "nome")) %>% 
-                                          dplyr::select(cnpj, nome_coop, everything()),
-   print("Vazio"))
+          numero_de_agencias_coop_i <- dcoop %>% purrr::pluck(., "numeroAgencias") %>% 
+             as.data.frame() %>% 
+             data.table::setnames(".","numeroAgencias") %>% 
+             dplyr::mutate(cnpj = purrr::pluck(dcoop, "cnpj"),
+                           nome_coop = purrr::pluck(dcoop, "nome")) %>% 
+             dplyr::select(cnpj, nome_coop, everything()),
+          print("Vazio"))
    
    
    if (exists("numero_de_agencias_coop_i")){
@@ -291,59 +195,8 @@ for(i in 1:length(cnpj)){
    } else {
       print("Faz nada")
    }
-}; rm(i)
- 
-write.csv(numero_de_agencias_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_numero_de_agencias.csv"), row.names = FALSE)
-
-# ** Conglomerado ----
-
-for(i in 1:length(cnpj)){
    
-   print(paste0("CNPJ ",cnpj[i]," --- ",i," de ",length(cnpj)))    
-   dcoop <- jsonlite::fromJSON(paste0("https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=", cnpj[i], ""))
-   
-   ifelse(
-      # !is.null(purrr::pluck(dcoop, "conglomerados")) |,
-      !all(sapply(purrr::pluck(dcoop, "conglomerados"), function(x) x == 0)),
-      conglomerado_coop_i <-
-         dcoop %>% purrr::pluck(., "conglomerados") %>%
-         as.data.frame() %>%
-         data.table::setnames("codigo", "codigo_conglomerado") %>%
-         dplyr::mutate(
-            cnpj = purrr::pluck(dcoop, "cnpj"),
-            nome_coop = purrr::pluck(dcoop, "nome")
-         ) %>%
-         dplyr::select(cnpj, nome_coop, everything(), -id),
-      print("Vazio")
-   )
-   
-   if (exists("conglomerado_coop_i")){
-      if (nrow(conglomerado_coop)==0){
-         conglomerado_coop <- conglomerado_coop_i
-      } else {
-         conglomerado_coop <- conglomerado_coop %>% rbind(conglomerado_coop_i)
-         rm(conglomerado_coop_i)
-      }
-   } else {
-      print("Faz nada")
-   }
-}; rm(i)
-
-
-
-
-if(nrow(conglomerado_coop) !=0) {
-   write.csv(conglomerado_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_conglomerado.csv"), row.names = FALSE)
-} else {
-   cat("Arquivo vazio")
-}
-
-# ** Auditor independente  ----
-i = 0
-for(i in 1:length(cnpj)){
-   
-   print(paste0("CNPJ ",cnpj[i]," --- ",i," de ",length(cnpj)))    
-   dcoop <- jsonlite::fromJSON(paste0("https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=", cnpj[i], ""))
+   print(paste0("CNPJ ",cnpj[i]," Auditor Independente")) 
    
    ifelse(
       !is.null(purrr::pluck(dcoop, "auditorIndependente")),
@@ -369,8 +222,29 @@ for(i in 1:length(cnpj)){
    } else {
       print("Faz nada")
    }
-}; rm(i)
+   
+};rm(i)
 
+write.csv(info_gerais_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_info_gerais.csv"), row.names = FALSE)
+write.csv(comite_auditoria_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_comite_auditoria.csv"), row.names = FALSE)
+
+estrutura_governanca |> dplyr::count(orgao) # Verirficar conselhos
+###### adicionar coluna identificando comite adm, fisc, dir
+# "COMITÊ DE AUDITORIA"       "CONSELHO DE ADMINISTRACAO"
+# "CONSELHO FISCAL"           "DIRETORIA EXECUTIVA"
+
+estrutura_governanca <- estrutura_governanca |>
+   dplyr::mutate(orgao = dplyr::case_when(
+      stringr::str_detect(orgao, "EXECUTIV") |
+         stringr::str_detect(orgao, "DIRETOR") ~ "DIRETORIA EXECUTIVA",
+      stringr::str_detect(orgao, "ADMIN") ~ "CONSELHO DE ADMINISTRAÇÃO",
+      TRUE ~ orgao
+   ))
+
+estrutura_governanca |> dplyr::count(orgao)
+
+write.csv(estrutura_governanca, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_estrutura_governanca.csv"), row.names = FALSE)
+write.csv(numero_de_agencias_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_numero_de_agencias.csv"), row.names = FALSE)
 
 if(nrow(auditor_independente_coop) !=0) {
    write.csv(auditor_independente_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_auditorIndependente.csv"), row.names = FALSE)
@@ -379,13 +253,12 @@ if(nrow(auditor_independente_coop) !=0) {
 }
 
 
-
-
-
-
 # Write the content on README
 paste0(
 "# Webscrapping dos Orgãos Estatutários das Cooperativas de Crédito - BACEN
+
+# Escrevendo dados atualizados no READ.me ---------------------------------
+
 
 Script criado para baixar informações sobre os órgãos estatutários das Cooperativas de Crédito disponíveis no site do Banco Central do Brasil (BACEN).
 
@@ -442,15 +315,15 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em:", format(Sys.Date(), '%b %d %Y'),".
+Atualizado em:", format(Sys.Date(), '%d %b %Y'), ".
 <hr> \n
 ## Cooperativas de Crédito: \n
-### Tabela de informações gerais: \n", paste(info_gerais_coop |> head(5), collapse = "\n"), 
-"### Tabela de comitê de auditoria: \n", paste(comite_auditoria_coop |> head(5), collapse = "\n"), 
-"### Tabela de estrutura de governança: \n", paste(estrutura_governanca |> head(5), collapse = "\n"), 
-"### Tabela de auditor independente: \n", paste(auditor_independente_coop |> head(5), collapse = "\n"), 
-"### Tabela de número de agências: \n", paste(numero_de_agencias_coop |> head(5), collapse = "\n"), 
-) |> writeLines("README.md")
+### Tabela de informações gerais: \n", paste(info_gerais_coop |> head(5) |>  knitr::kable(), collapse = "\n"), 
+"### Tabela de comitê de auditoria: \n", paste(comite_auditoria_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+"### Tabela de estrutura de governança: \n", paste(estrutura_governanca |> head(5) |> knitr::kable(), collapse = "\n"), 
+"### Tabela de auditor independente: \n", paste(auditor_independente_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+   "### Tabela de número de agências: \n", paste(numero_de_agencias_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+"") |> writeLines("README.md")
 
 
 
