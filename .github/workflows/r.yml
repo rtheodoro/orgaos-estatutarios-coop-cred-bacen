@@ -41,7 +41,22 @@ jobs:
             any::purrr
             any::jsonlite
             any::here
+            
+      - name: Criar pasta com base no ano e mês
+        run: |
+          # Obter a data atual em formato yyyy-mm-ddThh:mm:ssZ do GITHUB_SHA
+          data_atual_iso8601=${GITHUB_SHA:0:10}
 
+          # Extrair o ano e o mês da data atual
+          ano=${data_atual_iso8601:0:4}
+          mes=${data_atual_iso8601:5:2}
+
+          # Construir o caminho da pasta
+          caminho_pasta="dados/${ano}${mes}"
+
+          # Criar a pasta
+          mkdir -p "$caminho_pasta"
+                
       - name: Execute Script
         # executes the RScript stored in the file
         # 01-monitoring-quarto-repos/script.R
