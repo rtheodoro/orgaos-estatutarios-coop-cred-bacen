@@ -41,6 +41,7 @@ jobs:
             any::purrr
             any::jsonlite
             any::here
+            any::data.table
             
       - name: Criar pasta com base no ano e mês
         run: |
