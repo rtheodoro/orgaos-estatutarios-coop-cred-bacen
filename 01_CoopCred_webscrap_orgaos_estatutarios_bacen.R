@@ -253,12 +253,9 @@ if(nrow(auditor_independente_coop) !=0) {
 }
 
 
-# Write the content on README
+# Escrevendo dados atualizados no READ.me ---------------------------------
 paste0(
 "# Webscrapping dos Orgãos Estatutários das Cooperativas de Crédito - BACEN
-
-# Escrevendo dados atualizados no READ.me ---------------------------------
-
 
 Script criado para baixar informações sobre os órgãos estatutários das Cooperativas de Crédito disponíveis no site do Banco Central do Brasil (BACEN).
 

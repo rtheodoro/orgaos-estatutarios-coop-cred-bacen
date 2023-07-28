@@ -1,7 +1,5 @@
 # Webscrapping dos Orgãos Estatutários das Cooperativas de Crédito - BACEN
 
-# Escrevendo dados atualizados no READ.me ---------------------------------
-
 
 Script criado para baixar informações sobre os órgãos estatutários das Cooperativas de Crédito disponíveis no site do Banco Central do Brasil (BACEN).
 
