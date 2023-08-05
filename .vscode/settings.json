@@ -1,0 +1,21 @@
+{
+    
+    "r.rterm.linux": "/home/rtheodoro/.local/bin/radian",
+    "r.bracketedPaste": true,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "redhat.telemetry.enabled": false,
+    "editor.tabSize": 2,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    "files.defaultLanguage": "r",
+    "terminal.integrated.defaultLocation": "editor",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    
+    
+}

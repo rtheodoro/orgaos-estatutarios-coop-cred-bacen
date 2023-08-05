@@ -14,12 +14,15 @@ setwd(here::here())
 # Packages ----
 library(magrittr)
 
+
 # data da coleta ----------------------------------------------------------
 datacoleta <- format(Sys.time(), "%Y%m")
 
 # Baixando CSV com CNPJ das Coopcred que possuem informações ----
 # Url do CSV
 u_bc_csv <- "https://www3.bcb.gov.br/informes/rest/pessoasJuridicas/csv?seg=9&age=true"
+
+
 
 # local para salvar os arquivos
 caminho <- glue::glue("dados/{datacoleta}")
@@ -73,6 +76,7 @@ numero_de_agencias_coop <- data.frame()
 # ** Informacoes gerais ----
 i <- 0
 
+
 for(i in 1:length(cnpj)){
    
    print(paste0("CNPJ ",cnpj[i]," --- ",i," de ",length(cnpj)))  
@@ -87,6 +91,7 @@ for(i in 1:length(cnpj)){
       dplyr::mutate(
          nome_coop = purrr::pluck(dcoop, "nome", .default = NA),
          naturezaJuridica = purrr::pluck(dcoop, "naturezaJuridica", .default = NA),
+         classe = purrr::pluck(dcoop, "classeCooperativa", "nome", .default = NA),
          situacao = purrr::pluck(dcoop, "situacao", .default = NA),
          regimeEspecial = purrr::pluck(dcoop, "regimeEspecial", .default = NA),
          logradouro = purrr::pluck(dcoop, "endereco", "logradouro", .default = NA),
@@ -173,7 +178,7 @@ for(i in 1:length(cnpj)){
       
    }
    
-   print(paste0("CNPJ ",cnpj[i]," Número de Agẽncias")) 
+   print(paste0("CNPJ ",cnpj[i]," Número de Agências")) 
    
    ifelse(!is.null(purrr::pluck(dcoop, "numeroAgencias")),  
           numero_de_agencias_coop_i <- dcoop %>% purrr::pluck(., "numeroAgencias") %>% 
@@ -253,6 +258,88 @@ if(nrow(auditor_independente_coop) !=0) {
 }
 
 
+# Baixando Rede de Atendimento --------------------------------------------
+
+# As informaçóes da Rede de Atendimento estão em outro link.
+# Não encontrei um caminho para pegar o Json igual os itens anteriores,
+# apenas pelo link abaixo, que precisa de um id do bacen.
+
+# Exemplo
+# httr::GET(
+#    "https://www3.bcb.gov.br/informes/rest/agencia/csv?pso=Z9984384",
+#    httr::write_disk("teste.csv", overwrite = TRUE)
+# )
+
+# Pegando idBacen
+idbacen  <- data.frame()
+
+for (i in 1:length(cnpj)) {
+   dcoop <-
+      jsonlite::fromJSON(
+         paste0(
+            "https://www3.bcb.gov.br/informes/rest/pessoasJuridicas?cnpj=",
+            cnpj[i],
+            ""
+         )
+      )
+   
+   print(paste0("CNPJ ", cnpj[i], " - pegando código bacen -", i, " em ", length(cnpj), ""))
+   
+   idbacen_i <- dcoop %>% purrr::pluck(., "cnpj") %>%
+      as.data.frame() %>%
+      data.table::setnames(".", "cnpj") %>%
+      dplyr::mutate(idbacen = purrr::pluck(dcoop, "idBacen", .default = NA)) %>%
+      dplyr::select(cnpj, idbacen)
+   
+   if (exists("idbacen_i")) {
+      if (nrow(idbacen) == 0) {
+         idbacen <- idbacen_i
+      } else {
+         idbacen <- idbacen %>% rbind(idbacen_i)
+         rm(idbacen_i)
+      }
+   } else {
+      print("Faz nada")
+   }
+   
+}
+
+# Baixando todos os .csv
+
+rede_atendimento <- data.frame()
+
+for (i in 1:length(cnpj)) {
+   
+   print(paste0("CNPJ ", cnpj[i], " - pegando rede_atendimento - ", i, " em ", length(cnpj), ""))
+   
+   httr::GET(
+      "https://www3.bcb.gov.br/informes/rest/agencia/csv?pso=Z9984384",
+      httr::write_disk(glue::glue("{caminho}/apagar{cnpj[i]}.csv"), overwrite = TRUE)
+   )
+   
+   rede_atendimento_i <- read.csv(glue::glue("{caminho}/apagar{cnpj[i]}.csv"), sep = ";", skip = 16)
+   
+   rede_atendimento_i <- rede_atendimento_i |> dplyr::mutate(cnpj = glue::glue("{cnpj[i]}")) |> dplyr::select(cnpj, everything()) |> dplyr::slice(1:(dplyr::n() - 1)) |>  janitor::clean_names()
+   
+   if (exists("rede_atendimento_i")){
+      if (nrow(rede_atendimento)==0){
+         rede_atendimento <- rede_atendimento_i
+      } else {
+         rede_atendimento <- rede_atendimento %>% rbind(rede_atendimento_i)
+         rm(rede_atendimento_i)
+      }
+   } else {
+      print("Faz nada")
+   }
+
+   file.remove(file.path(glue::glue("{caminho}/apagar{cnpj[i]}.csv")))
+   
+} 
+
+
+write.csv(rede_atendimento, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_rede_atendimento.csv"), row.names = FALSE)
+
+
 # Escrevendo dados atualizados no READ.me ---------------------------------
 paste0(
 "# Webscrapping dos Orgãos Estatutários das Cooperativas de Crédito - BACEN
@@ -309,6 +396,10 @@ Ele irá baixar as infomações:
    numero_de_agencias_coop:
    
          numero agencias
+   
+   rede_atendimento:
+
+         endereco
          
 
 
@@ -328,6 +419,9 @@ Atualizado em: ", format(Sys.Date(), '%d %b %Y'), ".
 "\n
 
 ### Tabela de número de agências: \n", paste(numero_de_agencias_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
+"\n
+
+### Tabela de rede de atendimento: \n", paste(rede_atendimento |> head(5) |>  dplyr::mutate_all(~ iconv(., from = "UTF-8", to = "UTF-8//IGNORE")) |>  knitr::kable(), collapse = "\n"), 
 "\n") |> writeLines("README.md")
 
 
