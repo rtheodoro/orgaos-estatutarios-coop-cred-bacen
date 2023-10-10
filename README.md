@@ -59,7 +59,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Sep 2023.
+Atualizado em: 10 Oct 2023.
 <hr> 
 
 ## Cooperativas de Crédito: 
