@@ -33,11 +33,6 @@ Ele irá baixar as infomações:
       filiacaoCooperativaCentral
 
    
-   comite_auditoria_coop:
-   
-      orgaos
-      
-      administradores
       
    estrutura_governanca:
    
@@ -72,16 +67,6 @@ Atualizado em: 10 Oct 2023.
 | 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP                                                    |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |PRACA ALFREDO ISSA  48                   |18 ANDAR   CJS  181 182                            |SANTA EFIGENIA  |SAO PAULO    |SP |01033040 |www.sicoobcentralcecresp.coop.br |administracao@cecresp.org.br |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 | 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                                                                    |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA EMPRESARIO CLOVIS ROLIM  N 2051      |ED  DCT   DUO CORPORATE TOWERS  16  ANDAR  TORRE B |DOS IPES        |JOAO PESSOA  |PB |58028873 |www.sicoobne.com.br              |central@sicoobne.com.br      |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 |   106180|CENTRAL DAS COOPERATIVAS DE CRÉDITO DOS ESTADOS DE MATO GROSSO, MATO GROSSO DO SUL E DO MUNICÍPIO DE CACOAL/RO - SICOOB CENTRAL RONDON |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA I  185                               |PARQUE ELDORADO                                    |JARDIM ALVORADA |CUIABA       |MT |78048487 |                                 |central@sicoobmtms.coop.br   |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
-
-
-### Tabela de comitê de auditoria: 
-|    cnpj|nome_coop                                           |cpf         |nome                     |cargo             |
-|-------:|:---------------------------------------------------|:-----------|:------------------------|:-----------------|
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |11526279886 |ADRIANO CECILIO CARDENAS |CONSELHEIRO VOGAL |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |01571472827 |LUIS CARLOS VEGUIN       |PRESIDENTE        |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |10898806852 |LUIZ CARLOS LUCATELLI    |CONSELHEIRO VOGAL |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |12360067800 |RITA DE CASSIA DO AMARAL |CONSELHEIRO VOGAL |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |09634486843 |WILIAM CESAR PASQUETTA   |CONSELHEIRO VOGAL |
 
 
 ### Tabela de estrutura de governança: 
