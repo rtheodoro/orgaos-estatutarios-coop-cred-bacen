@@ -67,7 +67,6 @@ cnpj <- c(cnpj_coopcred$cnpj)
 
 # * Carrega df Vazios ----
 info_gerais_coop  <- data.frame()
-comite_auditoria_coop <- data.frame()
 estrutura_governanca <- data.frame()
 auditor_independente_coop <- data.frame()
 numero_de_agencias_coop <- data.frame()
@@ -123,25 +122,7 @@ for(i in 1:length(cnpj)){
       print("Faz nada")
    }
    
-   print(paste0("CNPJ ",cnpj[i]," Comitê de auditoria")) 
-   
-   ifelse(!is.null(purrr::pluck(dcoop,  "orgaos", "administradores", 1)),
-          comite_auditoria_coop_i <- dcoop %>% purrr::pluck(., "orgaos", "administradores", 1) %>% 
-             dplyr::mutate(cnpj = purrr::pluck(dcoop, "cnpj"),
-                           nome_coop = purrr::pluck(dcoop, "nome")) %>% 
-             dplyr::select(cnpj, nome_coop, everything(), -id),
-          print("Vazio"))
-   
-   if (exists("comite_auditoria_coop_i")){
-      if (nrow(comite_auditoria_coop)==0){
-         comite_auditoria_coop <- comite_auditoria_coop_i
-      } else {
-         comite_auditoria_coop <- comite_auditoria_coop %>% rbind(comite_auditoria_coop_i)
-         rm(comite_auditoria_coop_i)
-      }
-   } else {
-      print("Faz nada")
-   }
+  
    
    print(paste0("CNPJ ",cnpj[i]," Estrutura de governança")) 
    
@@ -231,7 +212,7 @@ for(i in 1:length(cnpj)){
 };rm(i)
 
 write.csv(info_gerais_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_info_gerais.csv"), row.names = FALSE)
-write.csv(comite_auditoria_coop, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_comite_auditoria.csv"), row.names = FALSE)
+
 
 estrutura_governanca |> dplyr::count(orgao) # Verirficar conselhos
 ###### adicionar coluna identificando comite adm, fisc, dir
@@ -377,11 +358,6 @@ Ele irá baixar as infomações:
       filiacaoCooperativaCentral
 
    
-   comite_auditoria_coop:
-   
-      orgaos
-      
-      administradores
       
    estrutura_governanca:
    
@@ -409,8 +385,6 @@ Atualizado em: ", format(Sys.Date(), '%d %b %Y'), ".
 ### Tabela de informações gerais: \n", paste(info_gerais_coop |> head(5) |>  knitr::kable(), collapse = "\n"), 
 "\n
 
-### Tabela de comitê de auditoria: \n", paste(comite_auditoria_coop |> head(5) |> knitr::kable(), collapse = "\n"), 
-"\n
 
 ### Tabela de estrutura de governança: \n", paste(estrutura_governanca |> head(5) |> knitr::kable(), collapse = "\n"), 
 "\n
