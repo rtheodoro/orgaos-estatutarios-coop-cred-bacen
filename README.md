@@ -54,7 +54,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Oct 2023.
+Atualizado em: 10 Nov 2023.
 <hr> 
 
 ## Cooperativas de Crédito: 
@@ -67,6 +67,7 @@ Atualizado em: 10 Oct 2023.
 | 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP                                                    |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |PRACA ALFREDO ISSA  48                   |18 ANDAR   CJS  181 182                            |SANTA EFIGENIA  |SAO PAULO    |SP |01033040 |www.sicoobcentralcecresp.coop.br |administracao@cecresp.org.br |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 | 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                                                                    |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA EMPRESARIO CLOVIS ROLIM  N 2051      |ED  DCT   DUO CORPORATE TOWERS  16  ANDAR  TORRE B |DOS IPES        |JOAO PESSOA  |PB |58028873 |www.sicoobne.com.br              |central@sicoobne.com.br      |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 |   106180|CENTRAL DAS COOPERATIVAS DE CRÉDITO DOS ESTADOS DE MATO GROSSO, MATO GROSSO DO SUL E DO MUNICÍPIO DE CACOAL/RO - SICOOB CENTRAL RONDON |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA I  185                               |PARQUE ELDORADO                                    |JARDIM ALVORADA |CUIABA       |MT |78048487 |                                 |central@sicoobmtms.coop.br   |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
+
 
 
 ### Tabela de estrutura de governança: 
@@ -102,9 +103,9 @@ Atualizado em: 10 Oct 2023.
 ### Tabela de rede de atendimento: 
 |cnpj    |nome                    |endereco                                |complemento      |bairro               |cep       |municipio      |uf |pais   |ddd |numero   |cod_compe_s_dv |x  |
 |:-------|:-----------------------|:---------------------------------------|:----------------|:--------------------|:---------|:--------------|:--|:------|:---|:--------|:--------------|:--|
-|1439107 |SICOOB PA - DIGITAL     |NA                                      |SALA 2           |VILA GARAVELLO       |14840-000 |GUARIBA        |SP |Brasil |-   |-        |-              |NA |
-|1439107 |SICOOB PA - DUMONT      |RUA ALFREDO CONDEIXA, 61                |-                |CENTRO               |14120-000 |DUMONT         |SP |Brasil |16  |39449410 |-              |NA |
-|1439107 |SICOOB PA - GUARIBA     |RUA 9 DE JULHO, 977                     |-                |CENTRO               |14840-000 |GUARIBA        |SP |Brasil |-   |-        |-              |NA |
+|1439107 |SICOOB PA - DIGITAL     |NA                                      |SALA 2           |VILA GARAVELLO       |14845-038 |GUARIBA        |SP |Brasil |-   |-        |-              |NA |
+|1439107 |SICOOB PA - DUMONT      |RUA ALFREDO CONDEIXA, 129               |-                |CENTRO               |14120-000 |DUMONT         |SP |Brasil |16  |39449410 |-              |NA |
+|1439107 |SICOOB PA - GUARIBA     |RUA 9 DE JULHO, 977                     |-                |CENTRO               |14840-021 |GUARIBA        |SP |Brasil |16  |32519700 |-              |NA |
 |1439107 |SICOOB PA - I9          |AVENIDA PRESIDENTE CASTELO BRANCO, 2525 |SALA 300 ANEXO A |PQ INDUSTRI LAGOINHA |14095-000 |RIBEIRAO PRETO |SP |Brasil |16  |32519700 |-              |NA |
 |1439107 |SICOOB PA - JABOTICABAL |NA                                      |-                |CENTRO               |14870-515 |JABOTICABAL    |SP |Brasil |16  |32099600 |-              |NA |
 
