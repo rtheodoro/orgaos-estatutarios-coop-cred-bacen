@@ -54,7 +54,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Jan 2024.
+Atualizado em: 10 Feb 2024.
 <hr> 
 
 ## Cooperativas de Crédito: 
@@ -87,7 +87,7 @@ Atualizado em: 10 Jan 2024.
 |   309024|CENTRAL DAS COOPERATIVAS DE ECONOMIA E CREDITO DO ESTADO DE MINAS GERAIS LTDA. - SICOOB CENTRAL CECREMGE                               |AUDSERVICE AUDITORES ASSOCIADOS SOCIEDADE SIMPLES LTDA |
 | 10398952|CONFEDERAÇÃO NACIONAL DAS COOPERATIVAS CENTRAIS DE CRÉDITO E ECONOMIA FAMILIAR E SOLIDÁRIA - CRESOL CONFEDERAÇÃO                       |PRICEWATERHOUSECOOPERS AUDITORES INDEPENDENTES LTDA    |
 |   315557|CONFEDERAÇÃO NACIONAL DAS COOPERATIVAS CENTRAIS UNICRED LTDA. - UNICRED DO BRASIL.                                                     |ERNST & YOUNG AUDITORES INDEPENDENTES S/S LTDA         |
-| 44469161|COOPECREDI GUARIBA - COOPERATIVA DE CREDITO                                                                                            |JULIO CESAR DIAS                                       |
+| 44469161|COOPECREDI GUARIBA - COOPERATIVA DE CREDITO                                                                                            |MOORE PRISMA AUDITORES INDEPENDENTES                   |
 
 
 ### Tabela de número de agências: 
