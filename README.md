@@ -48,7 +48,7 @@ Ele irá baixar as infomações:
    
          numero agencias
    
-   rede_atendimento:
+   rede_atendimento: * Usar apenas após 03/2024 (anteriores estão errados)
 
          endereco
          
