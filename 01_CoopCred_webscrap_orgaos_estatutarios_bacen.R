@@ -289,18 +289,18 @@ for (i in 1:length(cnpj)) {
 
 rede_atendimento <- data.frame()
 
-for (i in 1:length(cnpj)) {
+for (i in 1:nrow(idbacen)) {
    
    print(paste0("CNPJ ", cnpj[i], " - pegando rede_atendimento - ", i, " em ", length(cnpj), ""))
    
    httr::GET(
-      "https://www3.bcb.gov.br/informes/rest/agencia/csv?pso=Z9984384",
-      httr::write_disk(glue::glue("{caminho}/apagar{cnpj[i]}.csv"), overwrite = TRUE)
+      paste0("https://www3.bcb.gov.br/informes/rest/agencia/csv?pso=",idbacen[i,2]),
+      httr::write_disk(glue::glue("{caminho}/apagar{idbacen[i,1]}.csv"), overwrite = TRUE)
    )
    
-   rede_atendimento_i <- read.csv(glue::glue("{caminho}/apagar{cnpj[i]}.csv"), sep = ";", skip = 16)
+   rede_atendimento_i <- readr::read_csv2(glue::glue("{caminho}/apagar{idbacen[i,1]}.csv"), skip = 16,  locale = locale(encoding = "latin1"))
    
-   rede_atendimento_i <- rede_atendimento_i |> dplyr::mutate(cnpj = glue::glue("{cnpj[i]}")) |> dplyr::select(cnpj, everything()) |> dplyr::slice(1:(dplyr::n() - 1)) |>  janitor::clean_names()
+   rede_atendimento_i <- rede_atendimento_i |> dplyr::mutate(cnpj = glue::glue("{idbacen[i,1]}")) |> dplyr::select(cnpj, everything()) |> dplyr::slice(1:(dplyr::n() - 1)) |>  janitor::clean_names()
    
    if (exists("rede_atendimento_i")){
       if (nrow(rede_atendimento)==0){
@@ -313,9 +313,10 @@ for (i in 1:length(cnpj)) {
       print("Faz nada")
    }
 
-   file.remove(file.path(glue::glue("{caminho}/apagar{cnpj[i]}.csv")))
+   file.remove(file.path(glue::glue("{caminho}/apagar{idbacen[i,1]}.csv")))
    
 } 
+
 
 
 write.csv(rede_atendimento, glue::glue("{caminho}/{datacoleta}_CoopCred_BCB_rede_atendimento.csv"), row.names = FALSE)
