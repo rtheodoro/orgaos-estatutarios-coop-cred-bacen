@@ -298,7 +298,7 @@ for (i in 1:nrow(idbacen)) {
       httr::write_disk(glue::glue("{caminho}/apagar{idbacen[i,1]}.csv"), overwrite = TRUE)
    )
    
-   rede_atendimento_i <- readr::read_csv2(glue::glue("{caminho}/apagar{idbacen[i,1]}.csv"), skip = 16,  locale = locale(encoding = "latin1"))
+   rede_atendimento_i <- readr::read_csv2(glue::glue("{caminho}/apagar{idbacen[i,1]}.csv"), skip = 16,  locale = readr::locale(encoding = "latin1"))
    
    rede_atendimento_i <- rede_atendimento_i |> dplyr::mutate(cnpj = glue::glue("{idbacen[i,1]}")) |> dplyr::select(cnpj, everything()) |> dplyr::slice(1:(dplyr::n() - 1)) |>  janitor::clean_names()
    
