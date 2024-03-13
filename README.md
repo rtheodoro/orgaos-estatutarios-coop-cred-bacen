@@ -48,13 +48,13 @@ Ele irá baixar as infomações:
    
          numero agencias
    
-   rede_atendimento: * Usar apenas após 03/2024 (anteriores estão errados)
+   rede_atendimento:
 
          endereco
          
 
 
-Atualizado em: 10 Feb 2024.
+Atualizado em: 13 Mar 2024.
 <hr> 
 
 ## Cooperativas de Crédito: 
@@ -95,17 +95,17 @@ Atualizado em: 10 Feb 2024.
 |--------:|:--------------------------------------------------------------------------------------------------------------------------------------|--------------:|
 |  1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO                                                                                    |              0|
 |  5036532|CENTRAL DAS COOPERATIVAS DE CREDITO UNICOOB - SICOOB CENTRAL UNICOOB                                                                   |              0|
-| 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP                                                    |              1|
+| 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP                                                    |              0|
 | 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                                                                    |              0|
 |   106180|CENTRAL DAS COOPERATIVAS DE CRÉDITO DOS ESTADOS DE MATO GROSSO, MATO GROSSO DO SUL E DO MUNICÍPIO DE CACOAL/RO - SICOOB CENTRAL RONDON |              2|
 
 
 ### Tabela de rede de atendimento: 
-|cnpj    |nome                    |endereco                                |complemento      |bairro               |cep       |municipio      |uf |pais   |ddd |numero   |cod_compe_s_dv |x  |
-|:-------|:-----------------------|:---------------------------------------|:----------------|:--------------------|:---------|:--------------|:--|:------|:---|:--------|:--------------|:--|
-|1439107 |SICOOB PA - DIGITAL     |NA                                      |SALA 2           |VILA GARAVELLO       |14845-038 |GUARIBA        |SP |Brasil |-   |-        |-              |NA |
-|1439107 |SICOOB PA - DUMONT      |RUA ALFREDO CONDEIXA, 129               |-                |CENTRO               |14120-000 |DUMONT         |SP |Brasil |16  |39449410 |-              |NA |
-|1439107 |SICOOB PA - GUARIBA     |RUA 9 DE JULHO, 977                     |-                |CENTRO               |14840-021 |GUARIBA        |SP |Brasil |16  |32519700 |-              |NA |
-|1439107 |SICOOB PA - I9          |AVENIDA PRESIDENTE CASTELO BRANCO, 2525 |SALA 300 ANEXO A |PQ INDUSTRI LAGOINHA |14095-000 |RIBEIRAO PRETO |SP |Brasil |16  |32519700 |-              |NA |
-|1439107 |SICOOB PA - JABOTICABAL |NA                                      |-                |CENTRO               |14870-515 |JABOTICABAL    |SP |Brasil |16  |32099600 |-              |NA |
+|cnpj     |nome                   |endereco           |complemento |bairro |cep       |municipio  |uf |pais   |ddd |numero |cod_compe_s_dv |x12 |
+|:--------|:----------------------|:------------------|:-----------|:------|:---------|:----------|:--|:------|:---|:------|:--------------|:---|
+|1439107  |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
+|5036532  |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
+|62931522 |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
+|70116611 |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
+|106180   |SICOOB - PA DOM AQUINO |AVENIDA CUIABÁ, 78 |-           |CENTRO |78830-000 |DOM AQUINO |MT |Brasil |-   |-      |-              |NA  |
 
