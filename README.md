@@ -54,7 +54,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Nov 2024.
+Atualizado em: 10 Dec 2024.
 <hr> 
 
 ## Cooperativas de Crédito: 
