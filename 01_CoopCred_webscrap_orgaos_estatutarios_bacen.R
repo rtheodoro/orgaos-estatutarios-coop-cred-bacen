@@ -52,11 +52,12 @@ if (file.exists(dest_file)) {
 # não sei o motivo, não encontrei o cnpj
 
 cnpj_coopcred <-
-   read.csv(
-      glue::glue("{caminho}/{datacoleta}_cnpj_coopcred.csv"),
-      sep = ";",
-      skip = 7
-   ) |>
+   data.table::fread(glue::glue("{caminho}/{datacoleta}_cnpj_coopcred.csv"), skip= 6) |> 
+   # read.csv(
+   #    glue::glue("{caminho}/{datacoleta}_cnpj_coopcred.csv"),
+   #    sep = ";",
+   #    skip = 7
+   # ) |>
    janitor::clean_names() |>
    dplyr::select(cnpj) |>
    dplyr::filter(!is.na(cnpj))
