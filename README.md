@@ -54,7 +54,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Jan 2025.
+Atualizado em: 10 Feb 2025.
 <hr> 
 
 ## Cooperativas de Crédito: 
@@ -71,13 +71,13 @@ Atualizado em: 10 Jan 2025.
 
 
 ### Tabela de estrutura de governança: 
-|    cnpj|nomec                                               |cpf         |nome                     |cargo                      |orgao                     |
-|-------:|:---------------------------------------------------|:-----------|:------------------------|:--------------------------|:-------------------------|
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |11526279886 |ADRIANO CECILIO CARDENAS |CONSELHEIRO VOGAL          |CONSELHO DE ADMINISTRAÇÃO |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |01571472827 |LUIS CARLOS VEGUIN       |PRESIDENTE                 |CONSELHO DE ADMINISTRAÇÃO |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |10898806852 |LUIZ CARLOS LUCATELLI    |CONSELHEIRO VOGAL          |CONSELHO DE ADMINISTRAÇÃO |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |09634486843 |WILIAM CESAR PASQUETTA   |CONSELHEIRO VOGAL          |CONSELHO DE ADMINISTRAÇÃO |
-| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |67646468800 |LUIZ ROBERTO NAHUN       |CONSELHEIRO FISCAL EFETIVO |CONSELHO FISCAL           |
+|    cnpj|nomec                                               |cpf         |nome                     |cargo             |orgao                     |
+|-------:|:---------------------------------------------------|:-----------|:------------------------|:-----------------|:-------------------------|
+| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |11526279886 |ADRIANO CECILIO CARDENAS |CONSELHEIRO VOGAL |CONSELHO DE ADMINISTRAÇÃO |
+| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |01571472827 |LUIS CARLOS VEGUIN       |PRESIDENTE        |CONSELHO DE ADMINISTRAÇÃO |
+| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |10898806852 |LUIZ CARLOS LUCATELLI    |CONSELHEIRO VOGAL |CONSELHO DE ADMINISTRAÇÃO |
+| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |51504758820 |SERGIO ROBERTO NICOLETTI |CONSELHEIRO VOGAL |CONSELHO DE ADMINISTRAÇÃO |
+| 1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO |09634486843 |WILIAM CESAR PASQUETTA   |CONSELHEIRO VOGAL |CONSELHO DE ADMINISTRAÇÃO |
 
 
 ### Tabela de auditor independente: 
