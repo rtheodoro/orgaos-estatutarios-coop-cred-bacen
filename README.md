@@ -54,7 +54,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Feb 2025.
+Atualizado em: 10 Mar 2025.
 <hr> 
 
 ## Cooperativas de Crédito: 
@@ -66,7 +66,7 @@ Atualizado em: 10 Feb 2025.
 |  5036532|CENTRAL DAS COOPERATIVAS DE CREDITO UNICOOB - SICOOB CENTRAL UNICOOB                                                                   |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |AV  DUQUE DE CAXIAS  N  882  SOBRELOJA 2 |EDIFICIO NEW TOWER PLAZA                           |NOVO CENTRO     |MARINGA      |PR |87020025 |www.sicoobunicoob.com.br                                     |diretoria@sicoobpr.com.br    |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 | 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP                                                    |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |PRACA ALFREDO ISSA  48                   |18 ANDAR   CJS  181 182                            |SANTA EFIGENIA  |SAO PAULO    |SP |01033040 |www.sicoobcentralcecresp.coop.br                             |administracao@cecresp.org.br |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 | 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                                                                    |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA EMPRESARIO CLOVIS ROLIM  N 2051      |ED  DCT   DUO CORPORATE TOWERS  16  ANDAR  TORRE B |DOS IPES        |JOAO PESSOA  |PB |58028873 |https://www.sicoob.com.br/web/sicoobcentralnordeste/sicoob-c |central@sicoobne.com.br      |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
-|   106180|CENTRAL DAS COOPERATIVAS DE CRÉDITO DOS ESTADOS DE MATO GROSSO, MATO GROSSO DO SUL E DO MUNICÍPIO DE CACOAL/RO - SICOOB CENTRAL RONDON |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA I  185                               |PARQUE ELDORADO                                    |JARDIM ALVORADA |CUIABA       |MT |78048487 |                                                             |central@sicoobmtms.coop.br   |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
+|   106180|CENTRAL DAS COOPERATIVAS DE CRÉDITO DOS ESTADOS DE MATO GROSSO, MATO GROSSO DO SUL E DO MUNICÍPIO DE CACOAL/RO - SICOOB CENTRAL RONDON |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA I  185                               |PARQUE ELDORADO                                    |JARDIM ALVORADA |CUIABA       |MT |78048487 |https://www.sicoob.com.br/web/sicoobcentralrondon            |central@sicoobmtms.coop.br   |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 
 
 
