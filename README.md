@@ -54,7 +54,7 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 May 2025.
+Atualizado em: 10 Jun 2025.
 <hr> 
 
 ## Cooperativas de Crédito: 
@@ -96,16 +96,16 @@ Atualizado em: 10 May 2025.
 |  1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO                                                                                    |              0|
 |  5036532|CENTRAL DAS COOPERATIVAS DE CREDITO UNICOOB - SICOOB CENTRAL UNICOOB                                                                   |              0|
 | 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP                                                    |              0|
-| 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                                                                    |              0|
+| 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                                                                    |              1|
 |   106180|CENTRAL DAS COOPERATIVAS DE CRÉDITO DOS ESTADOS DE MATO GROSSO, MATO GROSSO DO SUL E DO MUNICÍPIO DE CACOAL/RO - SICOOB CENTRAL RONDON |              2|
 
 
 ### Tabela de rede de atendimento: 
-|cnpj     |nome                   |endereco           |complemento |bairro |cep       |municipio  |uf |pais   |ddd |numero |cod_compe_s_dv |x12 |
-|:--------|:----------------------|:------------------|:-----------|:------|:---------|:----------|:--|:------|:---|:------|:--------------|:---|
-|1439107  |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
-|5036532  |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
-|62931522 |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
-|70116611 |NA                     |NA                 |NA          |NA     |NA        |NA         |NA |NA     |NA  |NA     |NA             |NA  |
-|106180   |SICOOB - PA DOM AQUINO |AVENIDA CUIABÁ, 78 |-           |CENTRO |78830-000 |DOM AQUINO |MT |Brasil |-   |-      |-              |NA  |
+|cnpj     |nome                   |endereco                |complemento |bairro   |cep       |municipio  |uf |pais   |ddd |numero   |cod_compe_s_dv |x12 |
+|:--------|:----------------------|:-----------------------|:-----------|:--------|:---------|:----------|:--|:------|:---|:--------|:--------------|:---|
+|1439107  |NA                     |NA                      |NA          |NA       |NA        |NA         |NA |NA     |NA  |NA       |NA             |NA  |
+|5036532  |NA                     |NA                      |NA          |NA       |NA        |NA         |NA |NA     |NA  |NA       |NA             |NA  |
+|62931522 |NA                     |NA                      |NA          |NA       |NA        |NA         |NA |NA     |NA  |NA       |NA             |NA  |
+|70116611 |SICOOB - PA CARPINA/PE |AV ESTACIO COIMBRA, 320 |-           |SÃO JOSÉ |55815-000 |CARPINA    |PE |Brasil |87  |38442450 |-              |NA  |
+|106180   |SICOOB - PA DOM AQUINO |AVENIDA CUIABÁ, 78      |-           |CENTRO   |78830-000 |DOM AQUINO |MT |Brasil |-   |-        |-              |NA  |
 
