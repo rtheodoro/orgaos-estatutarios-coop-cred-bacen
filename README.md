@@ -54,19 +54,19 @@ Ele irá baixar as infomações:
          
 
 
-Atualizado em: 10 Jan 2026.
+Atualizado em: 10 Feb 2026.
 <hr> 
 
 ## Cooperativas de Crédito: 
 
 ### Tabela de informações gerais: 
-|     cnpj|nome_coop                                                                           |naturezaJuridica      |classe   |situacao                |regimeEspecial |logradouro                               |complemento                                        |bairro         |municipio    |uf |cep      |endereco_eletronico                                          |email                        |telefone_ddd |telefone_numero |segmento_prudencial |ato_presi |nome_Liquidante |filiacao |filiacao_central |
-|--------:|:-----------------------------------------------------------------------------------|:---------------------|:--------|:-----------------------|:--------------|:----------------------------------------|:--------------------------------------------------|:--------------|:------------|:--|:--------|:------------------------------------------------------------|:----------------------------|:------------|:---------------|:-------------------|:---------|:---------------|:--------|:----------------|
-| 48172860|A COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO DOS FUNCIONÁRIOS DA BRAZIL GR LTDA.       |Sociedade Cooperativa |Singular |Autorizada em Atividade |FALSE          |AV  BRASIL  2567                         |                                                   |INDUSTRIAL     |RIO CLARO    |SP |13505900 |                                                             |coopowens@uol.com.br         |NA           |NA              |S5                  |NA        |NA              |NA       |NA               |
-|  1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO                                 |Sociedade Cooperativa |Singular |Autorizada em Atividade |FALSE          |RUA ANTONIO FRANCO POMPEU, 261           |                                                   |VILA OPERÁRIA  |BARRA BONITA |SP |17340000 |                                                             |barracred@barracred.com.br   |NA           |NA              |S5                  |NA        |NA              |NA       |NA               |
-|  5036532|CENTRAL DAS COOPERATIVAS DE CREDITO UNICOOB - SICOOB CENTRAL UNICOOB                |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |AV  DUQUE DE CAXIAS  N  882  SOBRELOJA 2 |EDIFICIO NEW TOWER PLAZA                           |NOVO CENTRO    |MARINGA      |PR |87020025 |www.sicoobunicoob.com.br                                     |diretoria@sicoobpr.com.br    |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
-| 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |PRACA ALFREDO ISSA  48                   |18 ANDAR   CJS  181 182                            |SANTA EFIGENIA |SAO PAULO    |SP |01033040 |www.sicoobcentralcecresp.coop.br                             |administracao@cecresp.org.br |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
-| 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                 |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA EMPRESARIO CLOVIS ROLIM  N 2051      |ED  DCT   DUO CORPORATE TOWERS  16  ANDAR  TORRE B |DOS IPES       |JOAO PESSOA  |PB |58028873 |https://www.sicoob.com.br/web/sicoobcentralnordeste/sicoob-c |central@sicoobne.com.br      |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
+|     cnpj|nome_coop                                                                           |naturezaJuridica      |classe   |situacao                |regimeEspecial |logradouro                               |complemento                                        |bairro        |municipio    |uf |cep      |endereco_eletronico                                          |email                        |telefone_ddd |telefone_numero |segmento_prudencial |ato_presi |nome_Liquidante |filiacao |filiacao_central |
+|--------:|:-----------------------------------------------------------------------------------|:---------------------|:--------|:-----------------------|:--------------|:----------------------------------------|:--------------------------------------------------|:-------------|:------------|:--|:--------|:------------------------------------------------------------|:----------------------------|:------------|:---------------|:-------------------|:---------|:---------------|:--------|:----------------|
+| 48172860|A COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO DOS FUNCIONÁRIOS DA BRAZIL GR LTDA.       |Sociedade Cooperativa |Singular |Autorizada em Atividade |FALSE          |AV  BRASIL  2567                         |                                                   |INDUSTRIAL    |RIO CLARO    |SP |13505900 |                                                             |coopowens@uol.com.br         |NA           |NA              |S5                  |NA        |NA              |NA       |NA               |
+|  1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO                                 |Sociedade Cooperativa |Singular |Autorizada em Atividade |FALSE          |RUA ANTONIO FRANCO POMPEU, 261           |                                                   |VILA OPERÁRIA |BARRA BONITA |SP |17340000 |                                                             |barracred@barracred.com.br   |NA           |NA              |S5                  |NA        |NA              |NA       |NA               |
+|  5036532|CENTRAL DAS COOPERATIVAS DE CREDITO UNICOOB - SICOOB CENTRAL UNICOOB                |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |AV  DUQUE DE CAXIAS  N  882  SOBRELOJA 2 |EDIFICIO NEW TOWER PLAZA                           |NOVO CENTRO   |MARINGA      |PR |87020025 |www.sicoobunicoob.com.br                                     |diretoria@sicoobpr.com.br    |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
+| 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |AV. PAULISTA, 2313                       |4- ANDAR                                           |BELA VISTA    |SAO PAULO    |SP |01311300 |https://www.sicoob.com.br/web/sicoobcecresp/central-cecresp  |administracao@cecresp.org.br |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
+| 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                 |Sociedade Cooperativa |Central  |Autorizada em Atividade |FALSE          |RUA EMPRESARIO CLOVIS ROLIM  N 2051      |ED  DCT   DUO CORPORATE TOWERS  16  ANDAR  TORRE B |DOS IPES      |JOAO PESSOA  |PB |58028873 |https://www.sicoob.com.br/web/sicoobcentralnordeste/sicoob-c |central@sicoobne.com.br      |NA           |NA              |S4                  |NA        |NA              |NA       |NA               |
 
 
 
@@ -97,15 +97,15 @@ Atualizado em: 10 Jan 2026.
 |  1439107|BARRACRED - COOPERATIVA DE ECONOMIA E CRÉDITO MÚTUO                                 |              0|
 |  5036532|CENTRAL DAS COOPERATIVAS DE CREDITO UNICOOB - SICOOB CENTRAL UNICOOB                |              0|
 | 62931522|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO ESTADO DE SÃO PAULO - SICOOB CENTRAL CECRESP |              0|
-| 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                 |              0|
+| 70116611|CENTRAL DAS COOPERATIVAS DE CRÉDITO DO NORDESTE - SICOOB CENTRAL NE                 |              2|
 
 
 ### Tabela de rede de atendimento: 
-|cnpj     |nome |endereco |complemento |bairro |cep |municipio |uf |pais |ddd |numero |cod_compe_s_dv |x12 |
-|:--------|:----|:--------|:-----------|:------|:---|:---------|:--|:----|:---|:------|:--------------|:---|
-|48172860 |NA   |NA       |NA          |NA     |NA  |NA        |NA |NA   |NA  |NA     |NA             |NA  |
-|1439107  |NA   |NA       |NA          |NA     |NA  |NA        |NA |NA   |NA  |NA     |NA             |NA  |
-|5036532  |NA   |NA       |NA          |NA     |NA  |NA        |NA |NA   |NA  |NA     |NA             |NA  |
-|62931522 |NA   |NA       |NA          |NA     |NA  |NA        |NA |NA   |NA  |NA     |NA             |NA  |
-|70116611 |NA   |NA       |NA          |NA     |NA  |NA        |NA |NA   |NA  |NA     |NA             |NA  |
+|cnpj     |nome                        |endereco                |complemento |bairro     |cep       |municipio |uf |pais   |ddd |numero |cod_compe_s_dv |x12 |
+|:--------|:---------------------------|:-----------------------|:-----------|:----------|:---------|:---------|:--|:------|:---|:------|:--------------|:---|
+|48172860 |NA                          |NA                      |NA          |NA         |NA        |NA        |NA |NA     |NA  |NA     |NA             |NA  |
+|1439107  |NA                          |NA                      |NA          |NA         |NA        |NA        |NA |NA     |NA  |NA     |NA             |NA  |
+|5036532  |NA                          |NA                      |NA          |NA         |NA        |NA        |NA |NA     |NA  |NA     |NA             |NA  |
+|62931522 |NA                          |NA                      |NA          |NA         |NA        |NA        |NA |NA     |NA  |NA     |NA             |NA  |
+|70116611 |SICOOB - PA COHAB GARANHUNS |AV DUQUE DE CAXIAS, 270 |-           |HELIOPOLIS |55299-437 |GARANHUNS |PE |Brasil |-   |-      |-              |NA  |
 
